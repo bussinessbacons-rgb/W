@@ -1,15 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Annals of the Phoenixx</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<frameset rows="12%,88%" frameborder="0" border="0">
-<frame src="home.html" name="header" scrolling="no" noresize>
+<header class="site-header">
+<div class="header-content">
+<h1 class="magazine-title">Annals of the Phoenixx</h1>
+<p class="magazine-tagline">Rising Knowledge in the Age of Artificial Intelligence</p>
+</div>
+<nav class="main-nav">
+<ul>
+<li><a href="home.html" target="content">Home</a></li>
+<li><a href="note.html" target="content">Editor's Note</a></li>
+<li><a href="news.html" target="content">Articles</a></li>
+<li><a href="updates.html" target="content">Updates</a></li>
+</ul>
+</nav>
+</header>
 
-<frameset cols="20%,80%" frameborder="0" border="0">
-<frame src="menu.html" name="menu" noresize>
-<frame src="home.html" name="content">
-</frameset>
+<main class="main-content">
+<iframe src="home.html" name="content" class="content-frame"></iframe>
+</main>
 
-</frameset>
+</body>
 </html>
