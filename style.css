@@ -1,176 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Libre+Baskerville&display=swap');
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-font-family:'Libre Baskerville',serif;
-background:#0f0f0f;
-color:#f5f5f5;
-line-height:1.7;
-padding:30px;
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #0f0f0f;
+    color: #f5f5f5;
+    line-height: 1.7;
 }
 
-h1,h2,h3,h4{
-font-family:'Cinzel',serif;
-letter-spacing:2px;
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #3a0000, #b30000);
+    color: #ffd166;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.menu{
-background:#000;
+.header-content {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
 }
 
-nav ul{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:25px;
-margin-top:60px;
+.magazine-title {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-nav ul li{
-list-style:none;
+.magazine-tagline {
+    font-style: italic;
+    font-size: 18px;
+    color: #ffe599;
 }
 
-nav ul li a{
-color:white;
-text-decoration:none;
-font-size:18px;
-padding:10px 20px;
-border:1px solid #ff7a00;
-transition:.4s;
+.main-nav {
+    background: #111;
 }
 
-nav ul li a:hover{
-background:#ff7a00;
-color:black;
-transform:scale(1.1);
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
 }
 
-.cover{
-text-align:center;
-padding:60px;
-border:2px solid #ff7a00;
-box-shadow:0 0 25px rgba(255,122,0,0.6);
+.main-nav li {
+    margin: 0 25px;
 }
 
-.cover h1{
-font-size:60px;
-color:#ff7a00;
-margin-bottom:20px;
+.main-nav a {
+    color: #ffd166;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.cover h2{
-font-size:32px;
-margin-bottom:20px;
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffd166;
+    transition: width 0.3s;
 }
 
-.tagline{
-font-style:italic;
-margin-bottom:20px;
+.main-nav a:hover::after {
+    width: 100%;
 }
 
-.statement{
-max-width:800px;
-margin:auto;
-font-size:18px;
+.main-nav a:hover {
+    background: #ffd166;
+    color: #000;
+    transform: scale(1.05);
 }
 
-.date{
-margin-top:20px;
-color:#aaa;
+.main-content {
+    margin-top: 180px; /* header height + nav */
+    padding: 20px;
 }
 
-.intro{
-margin-top:50px;
-border-top:2px solid #ff7a00;
-padding-top:30px;
+.content-frame {
+    width: 100%;
+    height: calc(100vh - 180px);
+    border: none;
 }
 
-.intro ul{
-margin-left:40px;
-margin-top:20px;
+/* Optional: Scrollbar styling for iframe content */
+.content-frame::-webkit-scrollbar {
+    width: 10px;
 }
 
-.intro li{
-margin:10px 0;
+.content-frame::-webkit-scrollbar-track {
+    background: #111;
 }
 
-.editor{
-max-width:900px;
-margin:auto;
-}
-
-.profile{
-display:flex;
-gap:20px;
-margin-top:30px;
-align-items:center;
-border:1px solid #ff7a00;
-padding:20px;
-}
-
-.profile img{
-width:120px;
-border-radius:50%;
-}
-
-.articles article{
-margin-bottom:50px;
-padding-bottom:30px;
-border-bottom:1px solid #444;
-}
-
-.drop::first-letter{
-font-size:60px;
-float:left;
-line-height:1;
-padding-right:10px;
-color:#ff7a00;
-font-weight:bold;
-}
-
-.updates{
-max-width:900px;
-margin:auto;
-}
-
-.links{
-display:flex;
-gap:20px;
-margin:30px 0;
-}
-
-.links a{
-text-decoration:none;
-color:white;
-border:1px solid #ff7a00;
-padding:10px;
-transition:.3s;
-}
-
-.links img{
-display:block;
-margin-bottom:10px;
-}
-
-.links a:hover{
-background:#ff7a00;
-color:black;
-transform:scale(1.05);
-}
-
-.refs{
-margin-left:40px;
-}
-
-footer{
-margin-top:40px;
-text-align:center;
-border-top:1px solid #444;
-padding-top:20px;
-color:#aaa;
+.content-frame::-webkit-scrollbar-thumb {
+    background: #ffd166;
+    border-radius: 5px;
 }
